@@ -1,4 +1,17 @@
-// Carousel, Forms, Animations, and Utilities
+// ==============================
+// AOS - ANIMATE ON SCROLL INITIALIZATION
+// ==============================
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out-cubic',
+            once: true,
+            offset: 100,
+            delay: 50
+        });
+    }
+});// Carousel, Forms, Animations, and Utilities
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver(entries => {
     entries.forEach(e => e.isIntersecting && (e.target.style.opacity = '1', e.target.style.transform = 'translateY(0)'));
